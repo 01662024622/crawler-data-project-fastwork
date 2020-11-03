@@ -9,10 +9,11 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name="user_fastwork_project")
+@Table(name="sub_task")
 public class SubTask {
     @Id
     private String id;
+    @Column(length = 1000)
     private String title;
     @Column(name = "complete_date")
     private String completeDate;

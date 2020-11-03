@@ -1,6 +1,5 @@
 package com.fastwok.crawler.job;
 
-import com.fastwok.crawler.services.isservice.CustomerService;
 import com.fastwok.crawler.services.isservice.TaskService;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +17,7 @@ public class CrawlerFwSchedule {
 
 //    @Scheduled(fixedRateString = "${crawler.cron.delay}")
     public void importData() throws MessagingException, UnirestException {
-        taskService.getData();
+        taskService.getData("&status=%C4%90%C3%B3ng");
+        taskService.getData("");
     }
 }

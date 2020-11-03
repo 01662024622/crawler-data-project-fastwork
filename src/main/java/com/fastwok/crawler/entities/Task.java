@@ -13,7 +13,9 @@ import javax.persistence.Table;
 public class Task {
     @Id
     private String id;
+    @Column(length = 1000)
     private String title;
+    @Column(length = 1000)
     private String description;
     @Column(name="create_by")
     private String createBy;
